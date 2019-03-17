@@ -24,19 +24,19 @@ export default () => {
 						</a>
 					</li>
 					<li className="list-group-item">
-						<a href="https://github.com/sauloefo" title="Saulo's GitHub profile">
+						<a href="https://github.com/sauloefo" title="Saulo's GitHub profile" target="_blank" rel="noopener noreferrer">
 							<img className={indexStyle.socialMediaLogo} src={github_logo} alt="https://github.com/sauloefo"/>
 							<span className="ml-2">github.com/sauloefo</span>
 						</a>
 					</li>
 					<li className="list-group-item">
-						<a href="https://linkedin.com/in/sauloefo" title="Saulo's LinkedIn profile">
+						<a href="https://linkedin.com/in/sauloefo" title="Saulo's LinkedIn profile" target="_blank" rel="noopener noreferrer">
 							<img className={indexStyle.socialMediaLogo} src={linkedin_logo} alt="https://linkedin.com/in/sauloefo"/>
 							<span className="ml-2">linkedin.com/in/sauloefo</span>
 						</a>
 					</li>
 					<li className="list-group-item">
-						<a href="https://twitter.com/sauloefo" title="Saulo's twitter profile">
+						<a href="https://twitter.com/sauloefo" title="Saulo's twitter profile" target="_blank" rel="noopener noreferrer">
 							<img className={indexStyle.socialMediaLogo} src={twitter_logo} alt="https://twitter.com/sauloefo"/>
 							<span className="ml-2">twitter.com/sauloefo</span>
 						</a>
