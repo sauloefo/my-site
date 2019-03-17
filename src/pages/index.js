@@ -26,7 +26,7 @@ const contactsInfo = [
 		type: "linkedin",
 		href: "https://linkedin.com/in/sauloefo",
 		description: "Go to Saulo's LinkedIn profile",
-		openInNewTab: false,
+		openInNewTab: true,
 		imageCssClass: indexStyle.socialMediaLogo,
 		label: "linkedin.com/in/sauloefo"
 	},
