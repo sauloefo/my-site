@@ -4,11 +4,12 @@ import ShowContactInfo from "./ShowContactInfo"
 export default ({ contactsInfo }) => {
 	return (
 		<ul className="list-group"> 
-			{contactsInfo.map((contactInfo) => (
-				<li className="list-group-item">
+			{contactsInfo.map((contactInfo) => {
+				const key = contactInfo.type + contactInfo.label
+				return (<li key={key} className="list-group-item">
 					<ShowContactInfo contactInfo={contactInfo}></ShowContactInfo>
-				</li>
-			))}
+				</li>)
+			})}
 		</ul>
 	)
 }
