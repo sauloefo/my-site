@@ -1,12 +1,13 @@
 import React from "react";
 import indexStyle from "./index.module.css";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import favicon from "../components/images/favicon.png";
 import { Helmet } from "react-helmet";
 
 import ShowContactsInfo from "../components/ShowContactsInfo/";
+
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from "@material-ui/core/Container";
 
 const contactsInfo = [
   {
@@ -53,7 +54,8 @@ const contactsInfo = [
 
 export default () => {
   return (
-    <div>
+    <React.Fragment>
+      <CssBaseline />
       <Helmet
         title="Saulo Oliveira - Salesforce Specialist"
         meta={[
@@ -67,10 +69,11 @@ export default () => {
           }
         ]}
         link={[
-          { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon}` }
+          { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon}` },
+          { rel: "stylesheet", href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" }
         ]}
       />
-      <main role="main" className="container mt-3">
+      <Container>
         <div className="row">
           <div className="col col-12 col-lg">
             <h1>Saulo Oliveira</h1>
@@ -80,7 +83,7 @@ export default () => {
             <ShowContactsInfo contactsInfo={contactsInfo} />
           </div>
         </div>
-      </main>
+      </Container>
       <footer className={indexStyle.footerStyle}>
         <div class="container text-center mb-5">
           Favicon made by{" "}
@@ -102,6 +105,6 @@ export default () => {
           </a>
         </div>
       </footer>
-    </div>
+    </React.Fragment>
   );
 };
