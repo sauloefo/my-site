@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "my-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Saulo Oliveira personal website",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -14,17 +14,19 @@
   "dependencies": {
     "bootstrap": "4.3.1",
     "gatsby": "^2.0.76",
+    "gatsby-plugin-manifest": "2.1.1",
     "jquery": "3.3.1",
     "popper.js": "1.14.7",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1",
+    "react-helmet": "5.2.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/sauloefo/my-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/sauloefo/my-site/issues"
   },
   "devDependencies": {}
 }

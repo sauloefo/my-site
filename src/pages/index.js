@@ -3,6 +3,9 @@ import indexStyle from "./index.module.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import favicon from "../components/images/favicon.png";
+import { Helmet } from "react-helmet";
+
 import ShowContactsInfo from "../components/ShowContactsInfo/";
 
 const contactsInfo = [
@@ -50,16 +53,55 @@ const contactsInfo = [
 
 export default () => {
   return (
-    <div className="container mt-3">
-      <div className="row">
-        <div className="col col-12 col-lg">
-          <h1>Saulo Oliveira</h1>
-          <h4>Solution Architect & Salesforce Specialist</h4>
+    <div>
+      <Helmet
+        title="Saulo Oliveira - Salesforce Specialist"
+        meta={[
+          {
+            name: "description",
+            content: "Saulo Oliveira - Salesforce Specialist"
+          },
+          {
+            name: "keywords",
+            content: "Salesforce, developer, architect, specialist"
+          }
+        ]}
+        link={[
+          { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon}` }
+        ]}
+      />
+      <main role="main" className="container mt-3">
+        <div className="row">
+          <div className="col col-12 col-lg">
+            <h1>Saulo Oliveira</h1>
+            <h4>Solution Architect & Salesforce Specialist</h4>
+          </div>
+          <div className="col col-lg-auto">
+            <ShowContactsInfo contactsInfo={contactsInfo} />
+          </div>
         </div>
-        <div className="col col-lg-auto">
-          <ShowContactsInfo contactsInfo={contactsInfo} />
+      </main>
+      <footer className={indexStyle.footerStyle}>
+        <div class="container text-center mb-5">
+          Favicon made by{" "}
+          <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">
+            iconixar
+          </a>{" "}
+          from{" "}
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com
+          </a>{" "}
+          is licensed by{" "}
+          <a
+            href="http://creativecommons.org/licenses/by/3.0/"
+            title="Creative Commons BY 3.0"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CC 3.0 BY
+          </a>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };
