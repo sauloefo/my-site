@@ -6,7 +6,7 @@ export default ({ contactsInfo }) => {
 		<ul className="list-group"> 
 			{contactsInfo.map((contactInfo) => {
 				const key = contactInfo.type + contactInfo.label
-				return (<li key={key} className="list-group-item">
+				return (<li key={key}>
 					<ShowContactInfo contactInfo={contactInfo}></ShowContactInfo>
 				</li>)
 			})}

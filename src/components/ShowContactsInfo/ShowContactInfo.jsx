@@ -36,7 +36,7 @@ export default ({ contactInfo }) => {
   return (
     <a title={description} {...aProps}>
       <img className={imageCssClass} src={contactInfoLogo[type]} alt={href} />
-      <span className="ml-2">{label}</span>
+      <span>{label}</span>
     </a>
   );
 };

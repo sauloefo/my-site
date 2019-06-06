@@ -3,11 +3,23 @@ import indexStyle from "./index.module.css";
 
 import favicon from "../components/images/favicon.png";
 import { Helmet } from "react-helmet";
+import { makeStyles } from '@material-ui/core/styles';
+
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@material-ui/core/Container";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 import ShowContactsInfo from "../components/ShowContactsInfo/";
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Container from "@material-ui/core/Container";
+const useStyles = makeStyles(theme => ({
+  root: {
+    padding: theme.spacing(3, 2),
+  },
+  appFrame: {
+    height: '100%'
+  }
+}));
 
 const contactsInfo = [
   {
@@ -53,6 +65,8 @@ const contactsInfo = [
 ];
 
 export default () => {
+  const classes = useStyles();
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -73,38 +87,40 @@ export default () => {
           { rel: "stylesheet", href:"https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" }
         ]}
       />
-      <Container>
-        <div className="row">
-          <div className="col col-12 col-lg">
-            <h1>Saulo Oliveira</h1>
-            <h4>Solution Architect & Salesforce Specialist</h4>
-          </div>
-          <div className="col col-lg-auto">
-            <ShowContactsInfo contactsInfo={contactsInfo} />
-          </div>
-        </div>
+      <Container maxWidth="md">
+        <Paper className={classes.root} square={true} elevantion={2}>
+          <main height={classes.appFrame.height}>
+            <div>
+              <h1>Saulo Oliveira</h1>
+              <h4>Solution Architect & Salesforce Specialist</h4>
+            </div>
+            <div>
+              <ShowContactsInfo contactsInfo={contactsInfo} />
+            </div>
+          </main>
+
+          <footer> 
+            Favicon made by{" "}
+            <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">
+              iconixar
+            </a>{" "}
+            from{" "}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>{" "}
+            is licensed by{" "}
+            <a
+              href="http://creativecommons.org/licenses/by/3.0/"
+              title="Creative Commons BY 3.0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CC 3.0 BY
+            </a>
+          </footer>
+        </Paper>
       </Container>
-      <footer className={indexStyle.footerStyle}>
-        <div class="container text-center mb-5">
-          Favicon made by{" "}
-          <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">
-            iconixar
-          </a>{" "}
-          from{" "}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>{" "}
-          is licensed by{" "}
-          <a
-            href="http://creativecommons.org/licenses/by/3.0/"
-            title="Creative Commons BY 3.0"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CC 3.0 BY
-          </a>
-        </div>
-      </footer>
+      
     </React.Fragment>
   );
 };
