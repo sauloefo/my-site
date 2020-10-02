@@ -55,15 +55,15 @@ export default () => {
   return (
     <div>
       <Helmet
-        title="Saulo Oliveira - Salesforce Specialist"
+        title="Saulo Oliveira: XP, Kanban, System Thinking, Antifragility"
         meta={[
           {
             name: "description",
-            content: "Saulo Oliveira - Salesforce Specialist"
+            content: "Saulo Oliveira: Software Development Specialist driven by XP, Kanban, System Thinking and Antifragility."
           },
           {
             name: "keywords",
-            content: "Salesforce, developer, architect, specialist"
+            content: "XP, Kanban, System Thinking, Antifragility"
           }
         ]}
         link={[
@@ -73,8 +73,11 @@ export default () => {
       <main role="main" className="container mt-3">
         <div className="row">
           <div className="col col-12 col-lg">
-            <h1>Saulo Oliveira</h1>
-            <h4>Solution Architect & Salesforce Specialist</h4>
+            <h1 className="mb-5">Saulo Oliveira</h1>
+            <div>
+              <p>Software Development Specialist driven by</p>
+              <p>Extreme Programming, Kanban, System Thinking &#38; Antifragility.</p>
+            </div>
           </div>
           <div className="col col-lg-auto">
             <ShowContactsInfo contactsInfo={contactsInfo} />
