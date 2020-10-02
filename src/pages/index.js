@@ -71,15 +71,15 @@ export default () => {
     <React.Fragment>
       <CssBaseline />
       <Helmet
-        title="Saulo Oliveira - Salesforce Specialist"
+        title="Saulo Oliveira - Software Developement Specialist"
         meta={[
           {
             name: "description",
-            content: "Saulo Oliveira - Salesforce Specialist"
+            content: "Saulo Oliveira - Software Developement Specialist"
           },
           {
             name: "keywords",
-            content: "Salesforce, developer, architect, specialist"
+            content: "XP, Kanban, System Thinking, Antifragility"
           }
         ]}
         link={[
@@ -92,7 +92,7 @@ export default () => {
           <main height={classes.appFrame.height}>
             <div>
               <h1>Saulo Oliveira</h1>
-              <h4>Solution Architect & Salesforce Specialist</h4>
+              <h4>Software Development Specialist driven by XP, Kanban, System Thinking &#38; Antifragility.</h4>
             </div>
             <div>
               <ShowContactsInfo contactsInfo={contactsInfo} />
